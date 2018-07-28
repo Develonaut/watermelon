@@ -1,0 +1,17 @@
+.placeholder {
+    background-color: lightgray;
+    height: 40px;
+    width: 160px;
+
+    &--fullWidth {
+        width: 100%;
+    }
+
+    &--fullHeight {
+        height: 100%;
+    }
+
+    &--hidden {
+        display: none;
+    }
+}

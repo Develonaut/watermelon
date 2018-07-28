@@ -1,0 +1,17 @@
+iframe, .stream, .player {
+    border-radius: .3rem;
+}
+
+.stream {
+    width: 100%;
+    height: 100%;
+    .placeholder {
+        height: 200px;
+    }
+}
+
+.stream__frame{
+    &--hidden {
+        display: none;
+    }
+}
