@@ -5,13 +5,21 @@ iframe, .stream, .player {
 .stream {
     width: 100%;
     height: 100%;
-    .placeholder {
-        height: 200px;
-    }
-}
 
-.stream__frame{
-    &--hidden {
-        display: none;
+    .placeholder {
+        height: 100%;
+        margin-left: .5rem;
+    }
+
+    &--focused {
+        grid-column: 1 / -1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    &__frame{
+        &--hidden {
+            display: none;
+        }
     }
 }

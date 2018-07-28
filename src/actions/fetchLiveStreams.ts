@@ -1,20 +1,15 @@
 import { Dispatch } from 'redux';
+import { getFetch } from 'src/actions/fetch';
 import { FETCH_LIVE_STREAMS_ERROR, FETCH_LIVE_STREAMS_LOADING, FETCH_LIVE_STREAMS_SUCCESS } from 'src/constants/index';
 import { LiveStreamsActions, LiveStreamsJSON, Stream } from 'src/types';
 
-const twitchStreamsURL = 'https://api.twitch.tv/kraken/streams/?channel=irisheffects,ninja,develonaut&limit=4';
+const twitchLiveStreamsURL = 'https://api.twitch.tv/kraken/streams/?channel=irisheffects,ninja,develonaut&limit=4';
 
 export function fetchLiveStreams(): ((dispatch: Dispatch<LiveStreamsActions>) => void) {
     return (dispatch: Dispatch<LiveStreamsActions>) => {
         dispatch(fetchLiveStreamsLoading(true));
 
-        fetch(twitchStreamsURL, {
-            method: 'GET',
-            headers: {
-                'Client-Id': 'akib8dqextxoougxslqm5bqtsdaqcn',
-                'Accept': 'application/json',
-            },
-        })
+        getFetch(twitchLiveStreamsURL)
         .then((response) => {
             dispatch(fetchLiveStreamsLoading(false));
             return response.json();

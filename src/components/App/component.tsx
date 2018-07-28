@@ -25,15 +25,21 @@ export class AppPresentation extends React.Component<Props> {
     }
 
     const featuredStreams = this.props.streams;
-    const featuredStreamsNames = (!!featuredStreams && featuredStreams.length && featuredStreams);
-    return (
-      <div className="App">
-        <Streams>
-          {featuredStreamsNames && featuredStreamsNames.map(
-            (name: string) => <Stream streamerName={name} key={name} />,
-          )}
-        </Streams>
-      </div>
-    );
+
+    if (featuredStreams && featuredStreams.length) {
+      const featuredStreamsNames = (!!featuredStreams && featuredStreams.length && featuredStreams);
+      const focusedStreamName = featuredStreams.slice(0, 1)[0];
+      return (
+        <div className="App">
+          <Streams>
+            {featuredStreamsNames && featuredStreamsNames.map(
+              (name: string) => <Stream streamerName={name} key={name} focused={focusedStreamName === name}/>,
+            )}
+          </Streams>
+        </div>
+      );
+    }
+
+    return null;
   }
 }
