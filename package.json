@@ -18,8 +18,7 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
-    "postinstall": "npm run build"
+    "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
     "@types/jest": "^23.3.0",
