@@ -1,7 +1,7 @@
 import * as React from 'react';
+import { LogoBar } from 'src/components/LogoBar';
 import { Stream } from 'src/components/Stream';
 import { Streams } from 'src/components/Streams';
-import { LogoBar } from 'src/components/LogoBar';
 import './styles.scss';
 
 export interface Props {

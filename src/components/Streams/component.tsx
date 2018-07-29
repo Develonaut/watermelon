@@ -10,9 +10,6 @@ export class Streams extends React.Component {
     return (
       <div className="streamers">
         {this.props.children}
-        <div className="stream-filler" />
-        <div className="stream-filler" />
-        <div className="stream-filler" />
       </div>
     );
   }
