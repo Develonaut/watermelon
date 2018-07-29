@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Stream } from 'src/components/Stream';
 import { Streams } from 'src/components/Streams';
+import { LogoBar } from 'src/components/LogoBar';
 import './styles.scss';
 
 export interface Props {
@@ -31,6 +32,7 @@ export class AppPresentation extends React.Component<Props> {
       const focusedStreamName = featuredStreams.slice(0, 1)[0];
       return (
         <div className="App">
+          <LogoBar />
           <Streams>
             {featuredStreamsNames && featuredStreamsNames.map(
               (name: string) => <Stream streamerName={name} key={name} focused={focusedStreamName === name}/>,
