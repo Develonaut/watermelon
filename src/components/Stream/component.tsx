@@ -25,14 +25,16 @@ export class Stream extends React.Component<Props, State> {
     return (
       <div className={`stream stream--${streamClassModifier}`}>
         <Placeholder fullWidth fullHeight hidden={this.state.loaded} />
-        <iframe
-            className={`stream__frame stream__frame--${frameClassModifier}`}
-            onLoad={this.handleOnLoad}
-            src={`//player.twitch.tv/?channel=${this.props.streamerName}&muted=true`}
-            height="100%"
-            width="100%"
-            scrolling="no"
-        />
+        <div className="stream__container">
+          <iframe
+              className={`stream__frame stream__frame--${frameClassModifier}`}
+              onLoad={this.handleOnLoad}
+              src={`//player.twitch.tv/?channel=${this.props.streamerName}&muted=true`}
+              height="100%"
+              width="100%"
+              scrolling="no"
+          />
+        </div>
       </div>
     );
   }
