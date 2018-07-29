@@ -28,7 +28,7 @@ export class Stream extends React.Component<Props, State> {
         <iframe
             className={`stream__frame stream__frame--${frameClassModifier}`}
             onLoad={this.handleOnLoad}
-            src={`http://player.twitch.tv/?channel=${this.props.streamerName}&muted=true`}
+            src={`//player.twitch.tv/?channel=${this.props.streamerName}&muted=true`}
             height="100%"
             width="100%"
             scrolling="no"
