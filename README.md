@@ -7,4 +7,4 @@ Create Build: `npm build`
 Heroku:  
 Push to Heroku when on master branch: `git push heroku master`  
 Log Heroku Logs: `heroku logs --tail`  
-Start Heroku local instante: `heroku local web`  
+Start Heroku local instance: `heroku local web`  
