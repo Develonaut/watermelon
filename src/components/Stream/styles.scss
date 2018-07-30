@@ -1,3 +1,5 @@
+@import "src/constants/palette";
+
 $sixteen-by-nine: 56.25%;
 $four-by-three: 75%;
 
@@ -38,7 +40,7 @@ iframe, .stream, .player {
         grid-row-start: 1;
         grid-row-end: 1;
         z-index: -1;
-        background: #fa026c;
+        background: $papas-in-the-house;
         padding-bottom: .5rem;
         z-index: 9999;
     }
