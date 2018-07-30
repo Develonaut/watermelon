@@ -1,7 +1,6 @@
 import * as React from 'react';
-import './styles.scss';
-
 import { Placeholder } from 'src/components/Placeholder';
+import './styles.scss';
 
 interface PublicProps {
   streamerName: string;
