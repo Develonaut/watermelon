@@ -4,12 +4,10 @@ import { AppPresentation } from './component';
 
 describe('App -- ', () => {
   it('renders', () => {
-    const div = document.createElement('div');
     const mockFetchLiveStreams = jest.fn();
     const mockFetchFollowedStreams = jest.fn();
     const mockFetchFeaturedStreams = jest.fn();
-  
-  
+
     const wrapper = shallow((
       <AppPresentation
         fetchFollowedStreams={mockFetchFollowedStreams}
