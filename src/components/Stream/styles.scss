@@ -1,3 +1,6 @@
+$sixteen-by-nine: 56.25%;
+$four-by-three: 75%;
+
 iframe, .stream, .player {
     border-radius: .3rem;
     border: none;
@@ -9,12 +12,11 @@ iframe, .stream, .player {
 
     .placeholder {
         height: 100%;
-        margin-left: .5rem;
     }
 
     &__container {
         position: relative;
-        padding-top: 56.25%;
+        padding-top: $four-by-three;
 
         iframe {
             position: absolute;
@@ -25,10 +27,14 @@ iframe, .stream, .player {
         }
     }
 
+    &--focused,
+    &--default {
+        grid-column: 1 / -1;
+    }
+
     &--focused {
         position: sticky;
         top: 3.3rem;
-        grid-column: 1 / -1;
         grid-row-start: 1;
         grid-row-end: 1;
         z-index: -1;
@@ -40,6 +46,18 @@ iframe, .stream, .player {
     &__frame{
         &--hidden {
             display: none;
+        }
+    }
+}
+
+@media (min-width: 60rem) {
+    .stream {
+        &--default {
+            grid-column: auto;
+        }
+
+        &__container {
+            padding-top: $sixteen-by-nine;
         }
     }
 }
