@@ -94,7 +94,11 @@
       "<rootDir>/config/polyfills.js"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.ts",
-    "moduleDirectories": ["node_modules", "src", "."],
+    "moduleDirectories": [
+      "node_modules",
+      "src",
+      "."
+    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.(j|t)s?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).(j|t)s?(x)"
