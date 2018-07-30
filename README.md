@@ -5,6 +5,7 @@ Start App: `npm start`
 Create Build: `npm build`    
 Run Tests: `npm test`   
 Run Tests Coverage: `npm test -- --coverage`
+Lint Project: `npm lint`
 
 Heroku:  
 Push to Heroku when on master branch: `git push heroku master`  
