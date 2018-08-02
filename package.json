@@ -2,6 +2,9 @@
   "name": "watermelon",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "8.11.3"
+  },
   "dependencies": {
     "@types/classnames": "^2.2.5",
     "@types/enzyme": "^3.1.12",
