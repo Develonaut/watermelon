@@ -1,4 +1,4 @@
-A Singlepage Reactm and Redux Application to view a collection of featured Twitch.tv streams
+A Singlepage React and Redux Application to view a collection of featured Twitch.tv streams.
 http://www.watermelon.zone/ (May take 30 seconds for Heroku instance to spin up).
 
 NPM Scripts:
