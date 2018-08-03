@@ -1,9 +1,15 @@
+@import "src/constants/common";
+@import "src/components/Stream/styles";
+
 .streamers {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
-    place-items: center;
-    justify-content: center;
-    grid-auto-flow: row;
-    max-width: 140rem;
-    margin: 0 auto;
+    padding: 0;
+    grid-template-columns: 1fr minmax(30rem, 50) minmax(30rem, 50rem)  1fr;
+
+    @media (min-width: 40rem) {
+        grid-template-columns: 1fr minmax(15rem, #{$max-tile-width - $max-tile-width / 1.98}) minmax(15rem, #{$max-tile-width - $max-tile-width / 1.98}) 1fr;
+        display: grid;
+        grid-template-rows: minmax(18rem, 100%) auto;
+        grid-gap: #{$default-margin * 2} $default-margin;
+        justify-content: center;
+    }
 }

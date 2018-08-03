@@ -1,5 +1,9 @@
+@import "src/constants/common";
+
 .App {
   text-align: center;
+  padding-bottom: $default-padding;
+  min-width: 32rem;
 
   &-logo {
     animation: App-logo-spin infinite 20s linear;
